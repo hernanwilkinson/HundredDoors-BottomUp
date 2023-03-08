@@ -9,8 +9,8 @@ public class DoorsFlipper {
         this(1);
     }
 
-    public boolean isClosed(int i) {
-        return !opened[i-1];
+    public boolean isClosed(int doorPosition) {
+        return !opened[doorPosition-1];
     }
 
     public void flip(int step) {
