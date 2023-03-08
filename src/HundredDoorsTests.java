@@ -100,4 +100,14 @@ public class HundredDoorsTests {
         assertEquals(DoorsFlipper.INVALID_FLIP_STEP,exception.getMessage());
         assertTrue(doorsFlipper.isClosed(1));
     }
+
+    @Test
+    public void doorPositionMustBeStrictlyPositive() {
+        var doorsFlipper = new DoorsFlipper(1);
+
+        var exception = assertThrows(
+                IllegalArgumentException.class,
+                ()->doorsFlipper.isClosed(0));
+        assertEquals(DoorsFlipper.INVALID_DOOR_POSITION,exception.getMessage());
+    }
 }

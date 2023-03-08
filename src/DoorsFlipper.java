@@ -1,6 +1,7 @@
 public class DoorsFlipper {
     public static final String INVALID_NUMBER_OF_DOORS = "Number of doors must be strictly positive";
     public static final String INVALID_FLIP_STEP = "Step must be between 1 and number of doors";
+    public static final String INVALID_DOOR_POSITION = "Door position must be between 1 and number of doors";
     private boolean opened[];
 
     public DoorsFlipper(int numberOfDoors) {
