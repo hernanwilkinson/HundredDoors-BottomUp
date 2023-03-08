@@ -15,7 +15,7 @@ public class DoorsFlipper {
     }
 
     public boolean isClosed(int doorPosition) {
-        if (doorPosition<1) throw new IllegalArgumentException(INVALID_DOOR_POSITION);
+        if (doorPosition<1 || doorPosition>opened.length) throw new IllegalArgumentException(INVALID_DOOR_POSITION);
 
         return !opened[doorPosition-1];
     }
