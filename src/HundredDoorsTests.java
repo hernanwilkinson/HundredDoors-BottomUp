@@ -87,6 +87,6 @@ public class HundredDoorsTests {
                 IllegalArgumentException.class,
                 ()->doorsFlipper.flipEvery(0));
         assertEquals(DoorsFlipper.INVALID_FLIP_STEP,exception.getMessage());
-        assertTrue(doorsFlipper.isClosed(0));
+        assertTrue(doorsFlipper.isClosed(1));
     }
 }
