@@ -18,10 +18,14 @@ public class DoorsFlipper {
     }
 
     public void flipEvery(int step) {
-        if (step<1 || step>opened.length) throw new IllegalArgumentException(INVALID_FLIP_STEP);
+        assertIsValidStep(step);
 
         for (int doorPosition = step-1; doorPosition < opened.length; doorPosition+=step)
             opened[doorPosition] = !opened[doorPosition];
+    }
+
+    private void assertIsValidStep(int step) {
+        if (step <1 || step >opened.length) throw new IllegalArgumentException(INVALID_FLIP_STEP);
     }
 
     public void flipAll() {
