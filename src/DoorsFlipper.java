@@ -1,8 +1,8 @@
 public class DoorsFlipper {
-    private boolean closed[];
+    private boolean opened[];
 
     public DoorsFlipper(int i) {
-        closed = new boolean[i];
+        opened = new boolean[i];
     }
 
     public DoorsFlipper() {
@@ -10,12 +10,12 @@ public class DoorsFlipper {
     }
 
     public boolean isClosed(int i) {
-        return !closed[i-1];
+        return !opened[i-1];
     }
 
     public void flip() {
-        for (int j = 0; j < closed.length; j++) {
-            closed[j] = !closed[j];
+        for (int j = 0; j < opened.length; j++) {
+            opened[j] = !opened[j];
         }
 
     }
