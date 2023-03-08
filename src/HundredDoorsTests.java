@@ -78,4 +78,15 @@ public class HundredDoorsTests {
                 ()->new DoorsFlipper(0));
         assertEquals(DoorsFlipper.INVALID_NUMBER_OF_DOORS,exception.getMessage());
     }
+
+    @Test
+    public void flipStepMustBeStrictlyPositive() {
+        var doorsFlipper = new DoorsFlipper(1);
+
+        var exception = assertThrows(
+                IllegalArgumentException.class,
+                ()->doorsFlipper.flipEvery(0));
+        assertEquals(DoorsFlipper.INVALID_FLIP_STEP,exception.getMessage());
+        assertTrue(doorsFlipper.isClosed(0));
+    }
 }
