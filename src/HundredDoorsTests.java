@@ -13,7 +13,7 @@ public class HundredDoorsTests {
     @Test
     public void doorEndsOpenedWhenFlippedFromClosed() {
         var doorsFlipper = new DoorsFlipper();
-        doorsFlipper.flip();
+        doorsFlipper.flip(1);
 
         assertFalse(doorsFlipper.isClosed(1));
     }
@@ -21,9 +21,18 @@ public class HundredDoorsTests {
     @Test
     public void doorEndsClosedWhenFlippedFromOpened() {
         var doorsFlipper = new DoorsFlipper();
-        doorsFlipper.flip();
-        doorsFlipper.flip();
+        doorsFlipper.flip(1);
+        doorsFlipper.flip(1);
 
         assertTrue(doorsFlipper.isClosed(1));
+    }
+
+    @Test
+    public void canFlipMoreThanOneWithAStep() {
+        var doorsFlipper = new DoorsFlipper(2);
+        doorsFlipper.flip(1);
+
+        assertFalse(doorsFlipper.isClosed(1));
+        assertFalse(doorsFlipper.isClosed(2));
     }
 }
