@@ -1,19 +1,22 @@
 public class DoorsFlipper {
-    private boolean closed = true;
+    private boolean closed[];
 
     public DoorsFlipper(int i) {
-        throw new RuntimeException();
+        closed = new boolean[i];
     }
 
     public DoorsFlipper() {
-        throw new RuntimeException();
+        this(1);
     }
 
     public boolean isClosed(int i) {
-        return closed;
+        return !closed[i-1];
     }
 
-    public void flip(int i) {
-        closed = !closed;
+    public void flip() {
+        for (int j = 0; j < closed.length; j++) {
+            closed[j] = !closed[j];
+        }
+
     }
 }
