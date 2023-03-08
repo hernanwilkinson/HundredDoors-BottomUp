@@ -28,7 +28,7 @@ public class HundredDoorsTests {
     }
 
     @Test
-    public void canFlipMoreThanOneWithAStep() {
+    public void canFlipMoreThanOneDoor() {
         var doorsFlipper = new DoorsFlipper(2);
         doorsFlipper.flip();
 
