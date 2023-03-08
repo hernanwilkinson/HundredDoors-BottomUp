@@ -13,8 +13,8 @@ public class DoorsFlipper {
         return !opened[i-1];
     }
 
-    public void flip(int i) {
-        for (int j = i-1; j < opened.length; j+=i) {
+    public void flip(int step) {
+        for (int j = step-1; j < opened.length; j+=step) {
             opened[j] = !opened[j];
         }
 
