@@ -5,10 +5,6 @@ public class DoorsFlipper {
         opened = new boolean[numberOfDoors];
     }
 
-    public DoorsFlipper() {
-        this(1);
-    }
-
     public boolean isClosed(int doorPosition) {
         return !opened[doorPosition-1];
     }
