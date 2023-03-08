@@ -15,9 +15,11 @@ public class DoorsFlipper {
     }
 
     public boolean isClosed(int doorPosition) {
-        if (doorPosition<1 || doorPosition>opened.length) throw new IllegalArgumentException(INVALID_DOOR_POSITION);
-
-        return !opened[doorPosition-1];
+        try {
+            return !opened[doorPosition - 1];
+        } catch (IndexOutOfBoundsException e) {
+            throw new IllegalArgumentException(INVALID_DOOR_POSITION);
+        }
     }
 
     public void flipEvery(int step) {
