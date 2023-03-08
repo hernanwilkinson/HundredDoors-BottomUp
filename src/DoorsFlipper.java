@@ -17,6 +17,8 @@ public class DoorsFlipper {
     }
 
     public void flipAll() {
-        throw new RuntimeException();
+        for (int i = 0; i < opened.length; i++) {
+            flip(i+1);
+        }
     }
 }
