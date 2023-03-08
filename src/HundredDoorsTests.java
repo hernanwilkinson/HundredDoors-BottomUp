@@ -70,4 +70,12 @@ public class HundredDoorsTests {
         for (int doorPosition = 1; doorPosition <= 100; doorPosition++)
             assertEquals(!opened.contains(doorPosition),doorsFlipper.isClosed(doorPosition));
     }
+
+    @Test
+    public void numberOfDoorsMustBeStrictlyPositive() {
+        var exception = assertThrows(
+                IllegalArgumentException.class,
+                ()->new DoorsFlipper(0));
+        assertEquals(DoorsFlipper.INVALID_NUMBER_OF_DOORS,exception.getMessage());
+    }
 }
