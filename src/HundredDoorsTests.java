@@ -89,4 +89,15 @@ public class HundredDoorsTests {
         assertEquals(DoorsFlipper.INVALID_FLIP_STEP,exception.getMessage());
         assertTrue(doorsFlipper.isClosed(1));
     }
+
+    @Test
+    public void flipStepMustLessOrEqualToDoorsSize() {
+        var doorsFlipper = new DoorsFlipper(1);
+
+        var exception = assertThrows(
+                IllegalArgumentException.class,
+                ()->doorsFlipper.flipEvery(2));
+        assertEquals(DoorsFlipper.INVALID_FLIP_STEP,exception.getMessage());
+        assertTrue(doorsFlipper.isClosed(1));
+    }
 }
