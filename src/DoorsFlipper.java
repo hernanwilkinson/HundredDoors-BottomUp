@@ -15,4 +15,8 @@ public class DoorsFlipper {
         }
 
     }
+
+    public void flipAll() {
+        throw new RuntimeException();
+    }
 }
