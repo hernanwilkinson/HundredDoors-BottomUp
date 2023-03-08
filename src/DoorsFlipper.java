@@ -3,9 +3,13 @@ public class DoorsFlipper {
     private boolean opened[];
 
     public DoorsFlipper(int numberOfDoors) {
-        if (numberOfDoors<1) throw new IllegalArgumentException(INVALID_NUMBER_OF_DOORS);
+        assertValidNumberOfDoors(numberOfDoors);
 
         opened = new boolean[numberOfDoors];
+    }
+
+    private void assertValidNumberOfDoors(int numberOfDoors) {
+        if (numberOfDoors <1) throw new IllegalArgumentException(INVALID_NUMBER_OF_DOORS);
     }
 
     public boolean isClosed(int doorPosition) {
