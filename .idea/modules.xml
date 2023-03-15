@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/HundredDoors-BabySteps.iml" filepath="$PROJECT_DIR$/HundredDoors-BabySteps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HundredDoors-BottomUp.iml" filepath="$PROJECT_DIR$/HundredDoors-BottomUp.iml" />
     </modules>
   </component>
 </project>
